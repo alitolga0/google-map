@@ -128,50 +128,38 @@ const GoogleMap = () => {
   };
 
   return (
-    <div style={{ padding: "40px" }}>
+    <div className="p-20">
       <div>
-        <h1>Şirketimiz</h1>
+        <h1 className="text-2xl mb-10">Şirketimiz</h1>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr" }}>
-        <div>
-          <div
-            style={{
-              borderLeft: "1px solid rgba(0,0,0,0.1)",
-              marginBottom: "40px",
-            }}
-          >
-            <div style={{ display: "grid", gridTemplateColumns: "auto 1fr" }}>
+      <div className="grid grid-cols-3">
+        <div className="mr-20">
+          <div className="border-l-[1px] mb-20">
+            <div className="grid grid-cols-[auto_1fr]">
               <div>
                 <img src={icon1} alt="icon1" />
               </div>
               <div>
-                <h2 style={{ color: "#092D9B" }}>Farktor Teknopark Ofis</h2>
-                <p style={{ color: "#181A46", opacity: "0.6" }}>
+                <h2 className="text-[#092D9B]">Farktor Teknopark Ofis</h2>
+                <p className="text-[#181A46] opacity-[0.6]">
                   Aksu Mah. Omu Cad. no:77 Atakum/Samsun
                 </p>
               </div>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "auto 1fr" }}>
+            <div className="grid grid-cols-[auto_1fr]">
               <div>
                 <img src={icon2} alt="icon2" />
               </div>
               <div>
                 <p>Çağrı merkezi: 0850 259 3333</p>
-                <p style={{ color: "#181A46" }}>
+                <p className="text-[#181A46]">
                   (9.30 - 18.30 arasında ulaşabilirsiniz)
                 </p>
               </div>
             </div>
-            <div style={{ margin: "0 80px" }} onClick={changeAdress}>
+            <div className="m-[0_40px]" onClick={changeAdress}>
               <button
-                style={{
-                  background: "transparent",
-                  borderRadius: "20px",
-                  height: "40px",
-                  width: "150px",
-                  color: "#092D9B",
-                  border: "1px solid blue",
-                }}
+                className="bg-transparent	rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] border-[#092D9B]"
                 onClick={() => handleMarkerClick(markers[0])}
               >
                 Haritada Göster
