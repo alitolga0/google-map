@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import icon1 from "../icon/1.png";
 import icon2 from "../icon/2.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import FarktorTeknoparkOffice from "./FarktorTeknoparkOffice";
-import FarktorCentralOffice from "./FarktorCentralOffice";
+import FarktorOffice from "./FarktolOffice";
 
 const GoogleMap = () => {
   const [zoom, setZoom] = useState(10);
@@ -148,7 +147,7 @@ const GoogleMap = () => {
       </div>
       <div className="grid lg:grid-cols-3 md:grid-rows-2 p-5">
         <div className="lg:mr-10">
-          <FarktorTeknoparkOffice
+          <FarktorOffice
             moveToAddress={moveToAddress}
             handleMarkerClick={handleMarkerClick}
             icon1={icon1}
@@ -156,8 +155,11 @@ const GoogleMap = () => {
             markers={markers}
             lat={41.3617905}
             lng={36.1800858}
+            header={"Farktor Teknopark Ofis"}
+            address={"Aksu Mah. Omu Cad. no:77 Atakum/Samsun"}
+            telNo={"0850 259 3333"}
           />
-          <FarktorCentralOffice
+          <FarktorOffice
             moveToAddress={moveToAddress}
             handleMarkerClick={handleMarkerClick}
             icon1={icon1}
@@ -165,6 +167,9 @@ const GoogleMap = () => {
             markers={markers}
             lat={41.2886751}
             lng={36.3307018}
+            header={'Farktor Merkez Ofis'}
+            address={"Ulugazi mah. 19 mayıs blv. no:33 kat:1 D:2 İlkadım/Samsun"}
+            telNo={"0850 259 3333"}
           />
         </div>
         <div
