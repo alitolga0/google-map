@@ -149,7 +149,7 @@ const GoogleMap = () => {
           <div className="border-l-[1px] mb-20">
             <div className="grid grid-cols-[auto_1fr]">
               <div>
-                <img src={icon1} alt="icon1" />
+                <img className="icon" src={icon1} alt="icon1" />
               </div>
               <div>
                 <h2 className="text-[#092D9B]">Farktor Teknopark Ofis</h2>
@@ -160,7 +160,7 @@ const GoogleMap = () => {
             </div>
             <div className="grid grid-cols-[auto_1fr]">
               <div>
-                <img src={icon2} alt="icon2" />
+                <img className="icon" src={icon2} alt="icon2" />
               </div>
               <div>
                 <p>Çağrı merkezi: 0850 259 3333</p>
@@ -186,7 +186,7 @@ const GoogleMap = () => {
           <div className="border-l-[1px] mb-20">
             <div className="grid grid-cols-[auto_1fr]">
               <div>
-                <img src={icon1} alt="icon1" />
+                <img className="icon" src={icon1} alt="icon1" />
               </div>
               <div>
                 <h2 className="text-[#092D9B]">Farktor Merkez Ofis</h2>
@@ -197,7 +197,7 @@ const GoogleMap = () => {
             </div>
             <div className="grid grid-cols-[auto_1fr]">
               <div>
-                <img src={icon2} alt="icon2" />
+                <img className="icon" src={icon2} alt="icon2" />
               </div>
               <div>
                 <p>Çağrı merkezi: 0850 259 3333</p>
