@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import icon1 from "../icon/1.png";
 import icon2 from "../icon/2.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import FarktorTeknoparkOffice from "./FarktorTeknoparkOffice";
+import FarktorCentralOffice from "./FarktorCentralOffice";
 
 const GoogleMap = () => {
   const [zoom, setZoom] = useState(10);
@@ -146,80 +148,24 @@ const GoogleMap = () => {
       </div>
       <div className="grid lg:grid-cols-3 md:grid-rows-2 p-5">
         <div className="lg:mr-10">
-          <div className="border-l-[1px] mb-20">
-            <div className="grid grid-cols-[auto_1fr]">
-              <div>
-                <img className="icon" src={icon1} alt="icon1" />
-              </div>
-              <div>
-                <h2 className="text-[#092D9B]">Farktor Teknopark Ofis</h2>
-                <p className="text-[#181A46] opacity-[0.6]">
-                  Aksu Mah. Omu Cad. no:77 Atakum/Samsun
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-[auto_1fr]">
-              <div>
-                <img className="icon" src={icon2} alt="icon2" />
-              </div>
-              <div>
-                <p>Çağrı merkezi: 0850 259 3333</p>
-                <p className="text-[#181A46]">
-                  (9.30 - 18.30 arasında ulaşabilirsiniz)
-                </p>
-              </div>
-            </div>
-            <div
-              className="m-[0_40px]"
-              onClick={() =>
-                moveToAddress({ lat: 41.3617905, lng: 36.1800858 }, 15)
-              }
-            >
-              <button
-                className="bg-transparent rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] border-[#092D9B]"
-                onClick={() => handleMarkerClick(markers[0])}
-              >
-                Haritada Göster
-              </button>
-            </div>
-          </div>
-          <div className="border-l-[1px] mb-20">
-            <div className="grid grid-cols-[auto_1fr]">
-              <div>
-                <img className="icon" src={icon1} alt="icon1" />
-              </div>
-              <div>
-                <h2 className="text-[#092D9B]">Farktor Merkez Ofis</h2>
-                <p className="text-[181A46] opacity-[0.6]">
-                  Ulugazi mah. 19 mayıs blv. no:33 kat:1 D:2 İlkadım/Samsun
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-[auto_1fr]">
-              <div>
-                <img className="icon" src={icon2} alt="icon2" />
-              </div>
-              <div>
-                <p>Çağrı merkezi: 0850 259 3333</p>
-                <p style={{ color: "#181A46" }}>
-                  (9.30 - 18.30 arasında ulaşabilirsiniz)
-                </p>
-              </div>
-            </div>
-            <div
-              className="m-[0_40px]"
-              onClick={() =>
-                moveToAddress({ lat: 41.2886751, lng: 36.3307018 }, 20)
-              }
-            >
-              <button
-                className="bg-transparent rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] border-[#092D9B]"
-                onClick={() => handleMarkerClick(markers[1])}
-              >
-                Haritada Göster
-              </button>
-            </div>
-          </div>
+          <FarktorTeknoparkOffice
+            moveToAddress={moveToAddress}
+            handleMarkerClick={handleMarkerClick}
+            icon1={icon1}
+            icon2={icon2}
+            markers={markers}
+            lat={41.3617905}
+            lng={36.1800858}
+          />
+          <FarktorCentralOffice
+            moveToAddress={moveToAddress}
+            handleMarkerClick={handleMarkerClick}
+            icon1={icon1}
+            icon2={icon2}
+            markers={markers}
+            lat={41.2886751}
+            lng={36.3307018}
+          />
         </div>
         <div
           className="xl:w-[800px] lg:w-[640px] md:w-auto lg:h-[500px] xl:h-[360px] h-[360px]"
