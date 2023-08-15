@@ -110,8 +110,8 @@ const GoogleMap = () => {
   const moveToAddress = (newAdres, zoomLevel) => {
     if (map) {
       const currentLatLng = map.getCenter();
-      const steps = 200; 
-      const delayBetweenSteps = 10; 
+      const steps = 200;
+      const delayBetweenSteps = 10;
 
       const latStep = (newAdres.lat - currentLatLng.lat()) / steps;
       const lngStep = (newAdres.lng - currentLatLng.lng()) / steps;
@@ -144,7 +144,7 @@ const GoogleMap = () => {
       <div>
         <h1 className="text-2xl mb-[10px]">Şirketimiz</h1>
       </div>
-      <div className="grid grid-cols-3">
+      <div className="grid lg:grid-cols-3 md:grid-rows-2">
         <div className="mr-10">
           <div className="border-l-[1px] mb-20">
             <div className="grid grid-cols-[auto_1fr]">
@@ -169,7 +169,12 @@ const GoogleMap = () => {
                 </p>
               </div>
             </div>
-            <div className="m-[0_40px]" onClick={() => moveToAddress({ lat: 41.3617905, lng: 36.1800858 }, 15)}>
+            <div
+              className="m-[0_40px]"
+              onClick={() =>
+                moveToAddress({ lat: 41.3617905, lng: 36.1800858 }, 15)
+              }
+            >
               <button
                 className="bg-transparent rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] border-[#092D9B]"
                 onClick={() => handleMarkerClick(markers[0])}
@@ -201,7 +206,12 @@ const GoogleMap = () => {
                 </p>
               </div>
             </div>
-            <div className="m-[0_40px]" onClick={() => moveToAddress({ lat: 41.2886751, lng: 36.3307018 }, 20)}>
+            <div
+              className="m-[0_40px]"
+              onClick={() =>
+                moveToAddress({ lat: 41.2886751, lng: 36.3307018 }, 20)
+              }
+            >
               <button
                 className="bg-transparent rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] border-[#092D9B]"
                 onClick={() => handleMarkerClick(markers[1])}
@@ -211,7 +221,10 @@ const GoogleMap = () => {
             </div>
           </div>
         </div>
-        <div className="w-[800px] h-[360px]" id="map"></div>
+        <div
+          className="xl:w-[800px] lg:w-[640px] md:w-auto lg:h-[500px] xl:h-[360px] h-[360px]"
+          id="map"
+        ></div>
       </div>
     </div>
   );
