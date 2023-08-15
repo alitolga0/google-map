@@ -168,7 +168,7 @@ const GoogleMap = () => {
           />
         </div>
         <div
-          className="xl:w-[800px] lg:w-[640px] md:w-auto lg:h-[500px] xl:h-[360px] h-[360px]"
+          className="xl:w-[800px] lg:w-[640px] md:w-auto lg:h-[450px] xl:h-[340px] h-[340px]"
           id="map"
         ></div>
       </div>
