@@ -45,7 +45,7 @@ const GoogleMap = () => {
         icon: <FaMapMarkerAlt />,
         description: "Aksu Mah. Omu Cad. no:77 Atakum/Samsun",
         image:
-          "https://lh5.googleusercontent.com/p/AF1QipO4PNh-7LZDlqUU6vpreCF6xSCmRc92khZEK0Y=w426-h240-k-no",
+          "https://lh5.googleusercontent.com/p/AF1QipO4PNh-7LZDlqUU6vpreCF6xSCmRc92khZEK0Y=w300-h97-k-no",
       });
 
       const marker2 = new window.google.maps.Marker({
@@ -56,7 +56,7 @@ const GoogleMap = () => {
         description:
           "Ulugazi mah. 19 mayıs blv. no:33 kat:1 D:2 İlkadım/Samsun",
         image:
-          "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qsQkFnxSi00SSNU5WhCekw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=161.14879&pitch=0&thumbfov=100",
+          "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qsQkFnxSi00SSNU5WhCekw&cb_client=search.gws-prod.gps&w=300&h=90&yaw=161.14879&pitch=0&thumbfov=100",
       });
 
       setMarkers([marker1, marker2]);
