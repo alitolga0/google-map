@@ -110,7 +110,7 @@ const GoogleMap = () => {
   const moveToAddress = (newAdres, zoomLevel) => {
     if (map) {
       const currentLatLng = map.getCenter();
-      const steps = 150; 
+      const steps = 200; 
       const delayBetweenSteps = 10; 
 
       const latStep = (newAdres.lat - currentLatLng.lat()) / steps;
