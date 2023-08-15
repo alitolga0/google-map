@@ -14,8 +14,8 @@ function FarktorTeknoparkOffice({
           <img className="icon" src={icon1} alt="icon1" />
         </div>
         <div>
-          <h2 className="text-[#092D9B]">Farktor Teknopark Ofis</h2>
-          <p className="text-[#181A46] opacity-[0.6]">
+          <h2 className="text-[#092D9B] font-bold">Farktor Teknopark Ofis</h2>
+          <p className="text-[#181A46] opacity-[0.6] font-normal">
             Aksu Mah. Omu Cad. no:77 Atakum/Samsun
           </p>
         </div>
@@ -26,7 +26,7 @@ function FarktorTeknoparkOffice({
         </div>
         <div>
           <p>Çağrı merkezi: 0850 259 3333</p>
-          <p className="text-[#181A46]">
+          <p className="text-[#181A46] font-normal">
             (9.30 - 18.30 arasında ulaşabilirsiniz)
           </p>
         </div>
@@ -36,7 +36,7 @@ function FarktorTeknoparkOffice({
         onClick={() => moveToAddress({ lat: lat, lng: lng }, 15)}
       >
         <button
-          className="bg-transparent rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] border-[#092D9B]"
+          className="bg-transparent rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] rounded-3xl border-[#092D9B]"
           onClick={() => handleMarkerClick(markers[0])}
         >
           Haritada Göster

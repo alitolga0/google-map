@@ -144,7 +144,7 @@ const GoogleMap = () => {
   return (
     <div className="lg:p-20">
       <div>
-        <h1 className="text-2xl mb-[10px]">Şirketimiz</h1>
+        <h1 className="text-2xl mb-[10px] font-bold">Şirketimiz</h1>
       </div>
       <div className="grid lg:grid-cols-3 md:grid-rows-2 p-5">
         <div className="lg:mr-10">
