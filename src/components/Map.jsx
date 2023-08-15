@@ -142,10 +142,10 @@ const GoogleMap = () => {
   return (
     <div className="p-20">
       <div>
-        <h1 className="text-2xl mb-10">Şirketimiz</h1>
+        <h1 className="text-2xl mb-[10px]">Şirketimiz</h1>
       </div>
       <div className="grid grid-cols-3">
-        <div className="mr-20">
+        <div className="mr-10">
           <div className="border-l-[1px] mb-20">
             <div className="grid grid-cols-[auto_1fr]">
               <div>
@@ -211,7 +211,7 @@ const GoogleMap = () => {
             </div>
           </div>
         </div>
-        <div className="w-[886px] h-[585px]" id="map"></div>
+        <div className="w-[800px] h-[360px]" id="map"></div>
       </div>
     </div>
   );
