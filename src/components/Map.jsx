@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import icon1 from "../icon/1.png";
 import icon2 from "../icon/2.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import FarktorOffice from "./FarktolOffice";
+import FarktorOffice from "./FarktorOffice";
 
 const GoogleMap = () => {
   const [zoom, setZoom] = useState(10);
