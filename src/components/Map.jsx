@@ -69,7 +69,7 @@ const GoogleMap = () => {
     const newInfoWindow = new window.google.maps.InfoWindow({
       content: `
         <div>
-          <img style="width:100%; height:100px;" src=${marker.image} /><br>
+          <img style="width:100%; height:100px; margin: 0 auto;" src=${marker.image} /><br>
           <strong>${marker.title}</strong><br>${marker.description}
         </div>
       `,
@@ -101,8 +101,10 @@ const GoogleMap = () => {
 
     setSelectedMarker(marker);
 
-    map.setCenter(clickedLocation);
-    map.setZoom(15);
+    if (map) {
+      map.setCenter(clickedLocation);
+      map.setZoom(15);
+    }
   };
 
   const changeAdress = () => {
