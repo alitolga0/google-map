@@ -69,7 +69,7 @@ const GoogleMap = () => {
     const newInfoWindow = new window.google.maps.InfoWindow({
       content: `
         <div>
-          <img style="width:100%; height:100px; margin: 0 auto;" src=${marker.image} /><br>
+          <img className="w-[100%] h-[75px] m-[15px_auto]"  src=${marker.image} /><br>
           <strong>${marker.title}</strong><br>${marker.description}
         </div>
       `,
@@ -107,23 +107,35 @@ const GoogleMap = () => {
     }
   };
 
-  const changeAdress = () => {
-    const newAdres = { lat: 41.3617905, lng: 36.1800858 };
-    setAdres(newAdres);
-
+  const moveToAddress = (newAdres, zoomLevel) => {
     if (map) {
-      map.setCenter(newAdres);
-      map.setZoom(15);
-    }
-  };
+      const currentLatLng = map.getCenter();
+      const steps = 150; 
+      const delayBetweenSteps = 10; 
 
-  const changeAdress1 = () => {
-    const newAdres = { lat: 41.2886751, lng: 36.3307018 };
-    setAdres(newAdres);
+      const latStep = (newAdres.lat - currentLatLng.lat()) / steps;
+      const lngStep = (newAdres.lng - currentLatLng.lng()) / steps;
 
-    if (map) {
-      map.setCenter(newAdres);
-      map.setZoom(20);
+      let step = 0;
+
+      const animateMovement = () => {
+        const newPosition = {
+          lat: currentLatLng.lat() + latStep * step,
+          lng: currentLatLng.lng() + lngStep * step,
+        };
+
+        map.panTo(newPosition);
+
+        step++;
+
+        if (step <= steps) {
+          setTimeout(animateMovement, delayBetweenSteps);
+        } else {
+          map.setZoom(zoomLevel);
+        }
+      };
+
+      animateMovement();
     }
   };
 
@@ -157,9 +169,9 @@ const GoogleMap = () => {
                 </p>
               </div>
             </div>
-            <div className="m-[0_40px]" onClick={changeAdress}>
+            <div className="m-[0_40px]" onClick={() => moveToAddress({ lat: 41.3617905, lng: 36.1800858 }, 15)}>
               <button
-                className="bg-transparent	rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] border-[#092D9B]"
+                className="bg-transparent rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] border-[#092D9B]"
                 onClick={() => handleMarkerClick(markers[0])}
               >
                 Haritada Göster
@@ -189,9 +201,9 @@ const GoogleMap = () => {
                 </p>
               </div>
             </div>
-            <div className="m-[0_40px]" onClick={changeAdress1}>
+            <div className="m-[0_40px]" onClick={() => moveToAddress({ lat: 41.2886751, lng: 36.3307018 }, 20)}>
               <button
-                className="bg-transparent	rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] border-[#092D9B]"
+                className="bg-transparent rounded-2xl h-10 w-40 text-[#092D9B] border-[1px] border-[#092D9B]"
                 onClick={() => handleMarkerClick(markers[1])}
               >
                 Haritada Göster
